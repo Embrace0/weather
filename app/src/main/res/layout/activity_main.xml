@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/biz_plugin_weather_shenzhen_bg"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_city"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white"
+            android:dropDownVerticalOffset="48dp"
+            android:entries="@array/cities"
+            android:overlapAnchor="false"
+            android:popupBackground="@color/trans"
+            android:spinnerMode="dropdown" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="like"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:text="收藏" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="86dp"
+            android:onClick="refresh"
+            android:text="刷新" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_weather"
+        android:src="@drawable/biz_plugin_weather_yin"/>
+    <TextView
+        android:id="@+id/tv_tem_low_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="25°C~33°C"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="阴转多云"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="2023-06-30"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="西南风"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_updateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2023-07-01 18:29:17"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_future_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/like"
+        android:text="北京  20°C~35°C"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20sp"/>
+</LinearLayout>
